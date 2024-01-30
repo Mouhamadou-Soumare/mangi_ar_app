@@ -15,7 +15,7 @@ const BarcodeScanner = () => {
       Quagga.offDetected();
 
       axios
-        .post("http://localhost:3000/product/search-by-barcode", {
+        .post("https://mangi-server.vercel.app/product/search-by-barcode", {
           barcode: data.codeResult.code,
         })
         .then((response) => {

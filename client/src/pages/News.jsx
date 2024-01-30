@@ -8,7 +8,7 @@ const News = () => {
   const handleSearch = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/product/getNews/${searchTerm}`
+        `https://mangi-server.vercel.app/product/getNews/${searchTerm}`
       );
       setSearchResults(response.data.news); // Assurez-vous que la propriété correcte est utilisée ici
     } catch (error) {

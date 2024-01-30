@@ -22,7 +22,13 @@ code {
 }
 
 nav{
-  background-color: var(--base-darker-grey, #141518);
+  background-color: #0d1b2a;
+}
+
+
+footer{
+  background-color: #0d1b2a;
+  padding-top: 4rem;
 }
 
 .scanner{

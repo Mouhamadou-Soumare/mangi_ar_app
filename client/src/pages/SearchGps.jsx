@@ -8,7 +8,7 @@ const SearchGps = () => {
   const handleSearch = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/product/getProductStoresNearby/${searchTerm}`
+        `https://mangi-server.vercel.app/product/getProductStoresNearby/${searchTerm}`
       );
       setSearchResults(response.data);
     } catch (error) {
