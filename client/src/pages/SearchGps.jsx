@@ -4,18 +4,27 @@ import axios from "axios";
 const SearchGps = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [noResults, setNoResults] = useState(false);
 
   const handleSearch = async () => {
+    setLoading(true);
+    setNoResults(false);
+
     try {
       const response = await axios.get(
         `https://mangi-server.vercel.app/product/getProductStoresNearby/${searchTerm}`
       );
-      setSearchResults(response.data);
+
+      if (response.data.length === 0) {
+        setNoResults(true);
+      } else {
+        setSearchResults(response.data);
+      }
     } catch (error) {
-      console.error(
-        "Erreur lors de la recherche des magasins :",
-        error.message
-      );
+      console.error("Erreur lors de la recherche des magasins :", error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -38,13 +47,18 @@ const SearchGps = () => {
         </button>
       </div>
 
+      {loading && <div className="loader-container"><span className="loader"></span></div>}
+
+      {noResults && <p>Aucun résultat trouvé.</p>}
+
       <ul className="mt-4">
-        {searchResults.map((store, index) => (
-          <li key={index} className="mb-2">
-            <strong>{store.name}</strong>
-            <p className="text-gray-500">{store.address}</p>
-          </li>
-        ))}
+        {Array.isArray(searchResults) &&
+          searchResults.map((store, index) => (
+            <li key={index} className="mb-2">
+              <strong>{store.name}</strong>
+              <p className="text-gray-500">{store.address}</p>
+            </li>
+          ))}
       </ul>
     </div>
   );
