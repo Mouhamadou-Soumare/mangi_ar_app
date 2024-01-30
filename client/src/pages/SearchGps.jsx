@@ -16,7 +16,7 @@ const SearchGps = () => {
         `https://mangi-server.vercel.app/product/getProductStoresNearby/${searchTerm}`
       );
 
-      console.log(response);
+      console.log(response.data);
       console.log("ratio");
 
       if (response.data.length === 0) {
