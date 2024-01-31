@@ -7,9 +7,9 @@ const router = express.Router();
 
 
 
-router.post("https://mangi-server.vercel.app/search-by-barcode", productController.getProductByBarcode);
-router.get("https://mangi-server.vercel.app/getNews/:keyword", productController.getNews);
-router.get("https://mangi-server.vercel.app/getProductStoresNearby/:productName", productController.getProductStoresNearby
+router.post("/search-by-barcode", productController.getProductByBarcode);
+router.get("/getNews/:keyword", productController.getNews);
+router.get("/getProductStoresNearby/:productName", productController.getProductStoresNearby
 );
 
 

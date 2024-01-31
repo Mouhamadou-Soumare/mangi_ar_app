@@ -24,8 +24,8 @@ app.use(cors());
 
 
 // Utilisation des routes
-app.use('/auth', authRoute);
-app.use('/product', productRoute); // Utilisez la route du produit
+app.use('https://mangi-server.vercel.app/auth', authRoute);
+app.use('https://mangi-server.vercel.app/product', productRoute); // Utilisez la route du produit
 
 
 app.listen(port, () => {
