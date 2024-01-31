@@ -29,12 +29,8 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use("/", (req, res) => {
-    res.send("Le serveur fonctionne");
-});
-
-const port = process.env.PORT || 3000;
-
-app.listen(port, () => {
-    console.log(`Le serveur est démarré sur le port ${port}`);
-});
+// Exportez une fonction handler pour Vercel
+export default (req, res) => {
+  // Votre logique de routage habituelle
+  app(req, res);
+};
