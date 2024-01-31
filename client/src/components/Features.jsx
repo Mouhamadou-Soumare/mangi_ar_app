@@ -44,22 +44,22 @@ export default function Features() {
     <div className=" py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div >
-        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Fonctionnalités Incontournables de Mangi </h2>
+        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl title-secondary">Fonctionnalités Incontournables de Mangi </h2>
           
-        <p className="mt-6 text-lg leading-8 text-gray-300">
+        <p className="mt-6 text-lg leading-8 text-desc">
         Mangi offre une expérience alimentaire révolutionnaire avec réalité augmentée, infos nutritionnelles détaillées, traçabilité des produits, personnalisation et liste de courses intelligente.            </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             {features.map((feature) => (
               <div key={feature.name} className="relative pl-16">
-                <dt className="text-base font-semibold leading-7 text-gray-200">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                <dt className="text-base font-semibold leading-7 color-value">
+                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg icon-color-bg">
                     <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
                   {feature.name}
                 </dt>
-                <dd className="mt-2 text-base leading-7 text-gray-300">{feature.description}</dd>
+                <dd className="mt-2 text-base leading-7 value-desc">{feature.description}</dd>
               </div>
             ))}
           </dl>

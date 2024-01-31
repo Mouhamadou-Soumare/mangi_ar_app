@@ -75,12 +75,12 @@ const featuredTestimonial = {
       
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="l">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ce que nos utilisateurs disent de Manĝi</h2>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl title-secondary">Ce que nos utilisateurs disent de Manĝi</h2>
+          <p className="mt-6 text-lg leading-8  text-desc">
           Explorez les témoignages de nos utilisateurs et plongez dans le monde captivant de la réalité augmentée appliquée à la cuisine. Découvrez comment Manĝi transforme la manière dont les gens interagissent avec leurs produits alimentaires, ajoutant une dimension unique et informative à chaque repas.            </p>
           </div>
-          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-            <figure className="rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
+          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4 ">
+            <figure className="rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1 background-opacity-1">
               <blockquote className="p-6 text-lg font-semibold leading-7 tracking-tight text-gray-900 sm:p-12 sm:text-xl sm:leading-8">
                 <p>{`“${featuredTestimonial.body}”`}</p>
               </blockquote>
@@ -113,7 +113,7 @@ const featuredTestimonial = {
                     {column.map((testimonial) => (
                       <figure
                         key={testimonial.author.handle}
-                        className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
+                        className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5 background-opacity-1"
                       >
                         <blockquote className="text-gray-900">
                           <p>{`“${testimonial.body}”`}</p>

@@ -73,20 +73,20 @@ const BarcodeScanner = () => {
   }, [productInfo]);
 
   return (
-    <div>
+    <div className="scanner-big-container">
       <div
         id="scanner-container"
-        style={{ width: "640px", height: "480px", backgroundColor: "black" }}
+        style={{ width: "640px", height: "480px", backgroundColor: "white" }}
       />
 
-      {barcode && <p style={{ color: "white" }}>Code-Barres: {barcode}</p>}
+      {barcode && <p style={{ color: "black" }}>Code-Barres: {barcode}</p>}
 
       {productInfo && (
         <a-scene look-controls>
           <a-marker-camera preset="hiro" />
           <a-text
             position={`${textPosition.x} ${textPosition.y} ${textPosition.z}`}
-            color="white"
+            color="black"
             align="left"
             value={`Nom: ${productInfo.name}\nDescription: ${productInfo.description}\nCatégorie: ${productInfo.category}\nIngrédients: ${productInfo.ingredients}`}
             wrap-count="40"
@@ -96,13 +96,13 @@ const BarcodeScanner = () => {
       )}
 
       {!productInfo && barcode && (
-        <p style={{ color: "white" }}>
+        <p style={{ color: "black" }}>
           Aucune information trouvée pour ce produit.
         </p>
       )}
 
       {scanSuccess && !productInfo && (
-        <p style={{ color: "white" }}>
+        <p style={{ color: "black" }}>
           Chargement des informations du produit...
         </p>
       )}

@@ -29,8 +29,9 @@ const SearchGps = () => {
   };
 
   return (
-    <div className="container mx-auto mt-8 p-4 bg-gray-100">
-      <h2 className="text-2xl mb-4">Recherche de magasins à proximité</h2>
+    <div className="container mx-auto mt-8 p-4 ">
+                         <h1 className=" text-4xl font-bold tracking-tight text-white sm:text-6xl lg:col-span-2 xl:col-auto title-h1 pb-9 text-center">
+      Recherche de magasins à proximité</h1>
       <div className="flex items-center space-x-2">
         <input
           type="text"
