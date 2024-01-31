@@ -89,12 +89,7 @@ footer{
   border-radius: 16px;
 }
 
-.scanner-big-container{
-  display: flex;
-    justify-content: center;
-    align-items: center;
-  padding-top: 5%;
-}
+
 
 .section-background-primary{
   padding-top: 2rem;
