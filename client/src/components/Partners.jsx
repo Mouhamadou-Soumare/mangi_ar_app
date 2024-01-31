@@ -8,7 +8,7 @@ import franprix from "../assets/franprix.png"
 export default function Partners() {
     return (
 
-      <div className="section-background-primary">
+      <div className="section-background-primary section">
         <div className="pt-32 pb-32 py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <h2 className="text-3xl font-bold tracking-tight title-secondary sm:text-4xl">Partenariats et Collaborations </h2>

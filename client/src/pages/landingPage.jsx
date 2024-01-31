@@ -87,12 +87,15 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
+        <div class="scallop-down"></div>
+
         
         {/* <section class="container-wave">
           <div class="wave"></div>
         </section> */}
 
         {/* Values section */}
+        
         <div className="section-background-primary">
           <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8 pb-32 ">
             <div >
@@ -125,13 +128,16 @@ export default function LandingPage() {
 
         {/* CTA section */}
         <div className="relative isolate -z-10 mt-32 sm:mt-40">
+          
           <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+            
             <div className="mx-auto flex max-w-2xl flex-col gap-16 bg-white/5 px-6 py-16 ring-1 ring-black/40 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20 background-opacity-1">
               <img
                 className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm"
                 src={onboarding}
                 alt=""
               />
+              
               <div className="w-full flex-auto">
                 <h2 className="text-3xl font-bold tracking-tight title-secondary sm:text-4xl">Rejoindre notre équipe</h2>
                 <p className="mt-6 text-lg leading-8 text-desc  ">
