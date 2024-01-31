@@ -1,27 +1,19 @@
-// app.js
-import express from 'express';
-import authRoute from './src/routes/auth.js';
-import productRoute from "./src/routes/product.js";
-import connectDB from './config/db.config.js';
-import bodyParser from 'body-parser';
-import cors from 'cors'; 
+import express from "express";
 
-// Connexion à la base de données
-connectDB();
-
-// Création de l'application Express
 const app = express();
+const port = 3000;
 
-// Utilisation de bodyParser pour parser le corps des requêtes en JSON
-app.use(bodyParser.json());
-app.use(cors());
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://mangi-client.vercel.app');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+});
 
-// Utilisation des routes
-app.use('/auth', authRoute);
-app.use('/product', productRoute); // Utilisez la route du produit
+app.use("/", (req, res) => {
+    res.send("Le serveur fonctionne");
+});
 
-// Exportez une fonction handler
-export default (req, res) => {
-  // Votre logique de routage habituelle
-  app(req, res);
-};
+app.listen(port, () => {
+    console.log(`Le serveur démarre sur le port ${port}`);
+});
