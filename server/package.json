@@ -8,12 +8,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
   },
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "vercel-sapper"
-    }
-  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
