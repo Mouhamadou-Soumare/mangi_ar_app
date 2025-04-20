@@ -19,8 +19,13 @@ connectDB();
 
 // Utilisation de bodyParser pour parser le corps des requêtes en JSON
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://mangi-client.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 
+app.options('*', cors());
 
 
 // Utilisation des routes
