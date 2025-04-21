@@ -3,6 +3,7 @@ import { Landing, News, Search } from './pages';
 import { BarCodeScanner } from './components';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import BarcodePage from './pages/BarcodePage';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
         <Route path="/gps" component={Search} />
         <Route path="/news" component={News} />
 
-        <Route path="/bar" component={BarCodeScanner} />
+        <Route path="/bar" component={BarcodePage} />
         <Route path="/news" component={News} />
       </Switch>
       <Footer />

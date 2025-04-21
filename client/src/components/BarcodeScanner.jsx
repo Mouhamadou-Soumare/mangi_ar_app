@@ -74,10 +74,11 @@ const BarcodeScanner = () => {
 
   return (
     <div className="scanner-big-container">
-      <div
-        id="scanner-container"
-        style={{ width: "640px", height: "480px", backgroundColor: "white" }}
-      />
+     <div
+  id="scanner-container"
+  className="w-full aspect-video bg-white rounded-md overflow-hidden"
+/>
+
 
       {barcode && <p style={{ color: "black" }}>Code-Barres: {barcode}</p>}
 
