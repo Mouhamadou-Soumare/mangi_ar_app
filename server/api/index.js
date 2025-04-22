@@ -24,4 +24,10 @@ app.use(bodyParser.json());
 app.use('/auth', authRoute);
 app.use('/product', productRoute);
 
+// Define the port to listen on
+const PORT = process.env.PORT || 3000;  // You can set the port in your environment variable or default to 5000
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
 export default app;
