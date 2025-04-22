@@ -25,7 +25,7 @@ const BarcodeScanner = () => {
       // Appel à l'API pour récupérer les informations du produit
       axios
         .post("https://mangi-server.vercel.app/product/search-by-barcode", {
-          barcode: 3274080005003,
+          barcode: data.codeResult.code,
         })
         .then((response) => {
           setProductInfo(response.data);
